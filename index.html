@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eat & Meat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon"
+    href="data:image/png;base64,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"
+    type="image/x-icon">
+</head>
+
+<body>
+  <nav class="navbar bg-light navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold s-3" href="#">DA CRUST
+        <sup>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-star-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+        </sup>
+      </a>
+      <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active  text-danger" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menu</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Online</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="red" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+              </svg> Log In</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-basket"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5" />
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <button class="btn  btn-danger border border-1 border-danger rounded-0 btn-outline-light p-3 fs-5 px-5 button1">Order
+    Now</button>
+    <div class="container-fluid main">
+
+      <!-- box1 -->
+  <div class="container-fluid  d-flex justify-content-start align-items-center box1">
+    <div
+      class="mini1 border  border-2 border-dark  rounded-5   d-flex justify-content-center flex-column align-items-center">
+      <h2 class="text-light">OPEN FOR DELIVERY & PICK UP</h2>
+      <h1 class="display-1 fw-bold text-danger">GET IT WHILE <br> IT'S HOT</h1>
+      <button class="btn btn-danger  border border-1 border-danger rounded-0 btn-outline-light ">Order Online</button>
+    </div>
+  </div>
+
+  <div class="container-fluid  box2">
+    <div class="row"  data-aos="fade-down" data-aos-duration="3000">
+      <!-- col1 -->
+      <div class="col-12 col-md-6 col-lg-4 col-lg gap-3 bg-light d-flex justify-content-center align-items-center flex-column border-end border-1 border-dark rounded-0 h-100">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-phone "
+          viewBox="0 0 16 16">
+          <path
+            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+        </svg>
+
+        <h2 class="fw-bold ">ORDER ON THE GO</h2>
+        <pclass="pt-3">I'm a paragraph. Click <br> here to add your own text <br> and edit me. Let your <br> users get
+          to know you.
+          </p>
+      </div>
+      <!-- col2 -->
+      <div class="col-12 col-md-6 col-lg-4 gap-3  d-flex justify-content-center align-items-center flex-column bg-light  border-end border-1 border-dark rounded-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-car-front-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+        </svg>
+
+        <h2 class="fw-bold">DOORSTEP DELIVERY</h2>
+        <p>I'm a paragraph. Click <br> here to add your own text <br> and edit me. Let your <br> users get to know you.
+        </p>
+      </div>
+      <!-- col3 -->
+      <div class="col-12 gap-3 col-lg-4  d-flex justify-content-center align-items-center flex-column bg-light  border-end border-1 border-dark rounded-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-bag"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+        </svg>
+
+
+        <h2 class="fw-bold ">CURBSIDE PICKUP</h2>
+        <p>I'm a paragraph. Click <br> here to add your own text <br> and edit me. Let your <br> users get to know you.
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <!-- box3 -->
+  <div class="container-fluid d-flex justify-content-center align-items-center  box3">
+    <h1 class="display-1 text-center fw-bold">ORIGINAL RECIPE <br> SINCE 2035</h1>
+  </div>
+  <!-- box4 -->
+  <div class="container bg-light p-5 box4">
+        <h2 class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="yellow" class="bi bi-star-fill "
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+
+          All Time Favorites
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="yellow" class="bi bi-star-fill ms-3"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+        </h2>
+
+        <div class="row" data-aos="fade-up" data-aos-duration="3000">
+
+          <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="sub1">
+            </div>
+            <p class="fw-bold fs-5 ps-5">CRISPY CHICKEN WRAP</p>
+          </div>
+    
+          <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="sub2">
+            </div>
+            <p class="fw-bold fs-5">HOT & SPICY WINGS</p>
+          </div>
+    
+          <div class="col-12 col-lg-4 text-center">
+            <div class="sub3">
+            </div>
+            <p class="fw-bold fs-5">HOT & SPICY WINGS</p>
+          </div>
+    
+          <button class="btn btn-danger border border-1 border-danger rounded-0 btn-outline-light w-50 mx-auto">
+            Full Menu
+          </button>
+        </div>
+
+    </div>
+  <!-- box5 -->
+  <div class="container-fluid box5">
+    <div class="row">
+      <div class="col-12 col-lg-6 d-flex justify-content-center"  data-aos="fade-right" data-aos-duration="3000">
+        <img
+          src="https://static.wixstatic.com/media/2a1a02_f8dbb998cd5c415cb8b5005dabded533~mv2.jpg/v1/fill/w_592,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/2a1a02_f8dbb998cd5c415cb8b5005dabded533~mv2.jpg"
+          alt="" class="pic1">
+      </div>
+
+      <div class="col-12 col-lg-6 gap-3 bg-light d-flex  align-items-center flex-column" data-aos="fade-left" data-aos-duration="3000">
+        <h2 class="text-center display-2 fw-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red" class="bi bi-star-fill me-5"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>SPECIAL OF
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red" class="bi bi-star-fill ms-3"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg> <br> THE WEEK
+        </h2>
+
+        <h4 class="fw-bold">YOUR NEW GUILTY PLEASURE</h4>
+        <p>I'm a paragraph. Click here to add your own <br> text and edit me. It’s easy. Just click “Edit <br> Text” or
+          double click me to add your <br> own content and make changes to the fon</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid d-flex justify-content-center justify-content-lg-end align-items-center box6">
+    <div class="div d-flex justify-content-center  align-items-center mt-5 flex-column mini2" data-aos="fade-left" data-aos-duration="3000">
+      <h2 class="fw-bold text-center">WE DELIVER</h2>
+      <h4 class="py-3  text-center">SATISFYING YOUR CRAVING <br> JUST GOT EASIER</h4>
+      <p class="text-center ">I'm a paragraph. Click here to add your <br> own text and edit me. I’m a great place <br>
+        for you to tell a story and let your users <br> know a little more about you.</p>
+      <button class="btn btn-danger border border-1 border-danger rounded-0 btn-outline-light   ">
+        Order Online
+      </button>
+    </div>
+
+  </div>
+<!-- box7 -->
+  <div class="container-fluid box7">
+    <h1 class="text-center fw-bold">FOLLOW @DACRUST</h1>
+    <div class="row ">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="images1">
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3 ">
+        <div class="images2">
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 col-xl-3">
+        <div class="images3">
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-3">
+        <div class="images4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- BOX8 -->
+  <div class="container-fluid  box8">
+    <div class="row">
+      <div class="col-12 col-md-6 bg-light ">
+        <h1>CONTACT US</h1>
+        <h4>DROP US A LINE AND WE'LL GET BACK TO YOU</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p>First name*</p>
+              <input type="text" class="border-0 border-2 border-bottom border-dark bg-transparent">
+            </div>
+
+            <div class="col-12 col-md-6">
+              <p>Last name</p>
+              <input type="text" class="border-0 border-2 border-bottom border-dark bg-transparent">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p>Email</p>
+              <input type="text" class="border-0 border-2 border-bottom border-dark bg-transparent">
+            </div>
+
+            <div class="col-12 col-md-6">
+              <p>Subject</p>
+              <input type="text" class="border-0 border-2 border-bottom border-dark bg-transparent">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <p>Leave us a message...</p>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-12">
+              <textarea cols="40" rows="10" class="border-0 border-2 border-bottom border-dark bg-transparent"></textarea>
+            </div>
+            <button class="btn  border border-2  rounded-0  border-dark w-25 ms-auto button2">Submit</button>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 bg-light d-flex justify-content-center align-items-center flex-column">
+        <h2 class="display-5 fw-bold">WE'RE OPEN</h2>
+        <p>Monday-Friday : 11am-10pm <br> Saturday-Sunday: 11am-12am</p>
+        <p class="py-3">500 Terry Francois Street, <br> San Francisco, CA 94158</p>
+        <p>Tel: 123-456-7890 <br>Email: info@mysite.com</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#" class="text-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+            </a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="#" class="text-dark ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg>
+            </a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="#" class="text-dark ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid d-flex justify-content-center align-items-center  end">
+    <p class="text-light fs-5 ">© 2035 by Da Crust. Powered and secured by <u>Wix </u></p>
+
+  </div>
+
+
+    </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>
